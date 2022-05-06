@@ -9,6 +9,9 @@ def main():
     print(intent)
     intent_fsm = IBFSM(intent)
 
+    import pdb
+    pdb.set_trace()
+
 
 if __name__ == "__main__":
     main()

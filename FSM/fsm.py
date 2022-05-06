@@ -20,27 +20,27 @@ class IBFSM:
 
     transitions = [
         {
-            "trigger": "got_verb_from_intent",
+            "trigger": "got_action_from_intent",
             "source": "empty_intent",
             "dest": "action_given"
         },
         {
-            "trigger": "got_invalid_verb_from_intent",
+            "trigger": "got_invalid_action_from_intent",
             "source": "empty_intent", "dest": "invalid"
         },
         {
-            "trigger": "got_action_from_intent",
+            "trigger": "got_resource_from_intent",
             "source": "action_given",
             "dest": "resource_given"
         },
         {
-            "trigger": "got_invalid_action_from_intent",
+            "trigger": "got_invalid_resource_from_intent",
             "source": "action_given",
             "dest": "invalid"
         },
         # TODO add conditions in resources and context transactions
         {
-            "trigger": "got_resource_from_intent",
+            "trigger": "got_ctxt_from_intent",
             "source": "resource_given",
             "dest": "ctxt_given"
         },

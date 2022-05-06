@@ -17,13 +17,13 @@ class TestFSM(unittest.TestCase):
         intent = Intent("create", "slice", "hardware")
         IBFSM(intent)
 
-        intent.got_verb_from_intent()
+        intent.got_action_from_intent()
         self.assertEqual(intent.state, "action_given", "Should be action_given")
 
-        intent.got_action_from_intent()
+        intent.got_resource_from_intent()
         self.assertEqual(intent.state, "resource_given", "Should be resource_given")
 
-        intent.got_resource_from_intent()
+        intent.got_ctxt_from_intent()
         self.assertEqual(intent.state, "ctxt_given", "Should be ctxt_given")
 
         intent.got_ctxt_from_intent()
