@@ -42,7 +42,8 @@ class Intent:
 
         # TODO In general, context is an array of Context objects
         self.resource = resource
-        self.context = context
+        self.context = []
+        self.context.append(context)
 
     def __str__(self):
         return "Intent = [Action={0}, Resource={1}, Context={2}]".format(self.action, self.resource, self.context)

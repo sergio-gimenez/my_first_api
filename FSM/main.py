@@ -1,15 +1,14 @@
 from intent import Intent
 from fsm import IBFSM
+import pdb
 
 
 def main():
 
-    # intent = Intent("create", "slice", "hardware", "amarisoft", "between", "A", "B")
-    intent = Intent("create", "slice", "hardware")
-    print(intent)
-    intent_fsm = IBFSM(intent)
-
-    import pdb
+    print("Given intent: Create slice for holoconference purposes between node_x and node_y")
+    intent = Intent("create", "slice", ["node_x", "node_y"])
+    print("Parsed " + str(intent))
+    IBFSM(intent)
     pdb.set_trace()
 
 
